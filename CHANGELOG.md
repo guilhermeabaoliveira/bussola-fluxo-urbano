@@ -2,6 +2,9 @@
 
 ## Revisão de 18/11/2026
 
+- Equipe apresentada em tabela com os oito integrantes, perfis GitHub e e-mails institucionais fornecidos.
+- README com pinagem resumida e acesso às duas práticas; índice documental organizado por finalidade.
+
 - HC-SR04 de quatro pinos identificado pelas fotos do componente testado.
 - Funcionamento de uma unidade registrado como relato do grupo; integração completa permanece pendente.
 - Trilhos do mapa de montagem nomeados por contato e concentrados na primeira metade.

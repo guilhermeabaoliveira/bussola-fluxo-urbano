@@ -28,6 +28,24 @@ python -m http.server 8767 --bind 127.0.0.1
 
 Abra `http://127.0.0.1:8767/`. O servidor fica restrito ao próprio computador. O [manual](docs/manual.md) explica navegação e apresentação no Acer Nitro.
 
+## Montagem Arduino
+
+| Componente | Pinos na UNO | Identificação no sketch |
+|---|---|---|
+| HC-SR04 · rota A | TRIG D2 / ECHO D3 | `TRIG[0]` / `ECHO[0]` |
+| HC-SR04 · rota B | TRIG D4 / ECHO D5 | `TRIG[1]` / `ECHO[1]` |
+| HC-SR04 · rota C | TRIG D6 / ECHO D7 | `TRIG[2]` / `ECHO[2]` |
+| Servo do ponteiro | Sinal D9 | `SERVO_PIN` |
+
+Os três HC-SR04 usam 5 V e GND da UNO. O servo usa fonte regulada externa de 5 V, com GND comum e positivos separados. O [mapa de montagem](docs/montagem.md) identifica cada fio e seu contato na protoboard.
+
+| Prática | Montagem e material de estudo | Simulação |
+|---|---|---|
+| Uma unidade | [Código, PDF e montagem](https://guilhermeabaoliveira.github.io/bussola-fluxo-urbano/arduino-ide/TesteHCSR04/) | [Abrir Tinkercad](https://www.tinkercad.com/things/9I4VWpiVhHj/editel) |
+| Três unidades e servo | [Código, PDF e montagem](https://guilhermeabaoliveira.github.io/bussola-fluxo-urbano/arduino-ide/BussolaFluxoUrbano/) | [Abrir Tinkercad](https://www.tinkercad.com/things/b0Wd2hCfCxH/editel) |
+
+Os projetos Tinkercad permanecem privados na conta da equipe e podem solicitar login. As imagens das montagens, os sketches e os PDFs estão disponíveis no portfólio público.
+
 ## Evidências e limites
 
 O grupo relatou funcionamento de uma unidade HC-SR04 em 18/11/2026. A integração física dos três sensores e do servo permanece como ensaio a realizar. A animação representa entradas controladas e não comprova desempenho em parque público.
@@ -38,9 +56,16 @@ O HC-SR04 mede distância; não classifica pessoas, cães ou outros alvos. Tecno
 
 ## Equipe
 
-Guilherme Alcântara Batista Alencar de Oliveira; Samuel Bernardi Sá; Enzo Leal Cavalcanti; Maria Alice Rocha de Alcantara; João Victor Teixeira de Albuquerque Maranhão; Mateus Dias Dino; João Guilherme Sousa Gomes; Pedro Henrique de Freitas Veloso.
-
-As responsabilidades e resultados devem refletir as atividades efetivamente realizadas pelo grupo. Esta documentação não atribui autoria individual sem registro correspondente.
+| Integrante | GitHub | E-mail institucional |
+|---|---|---|
+| Enzo Leal Cavalcanti | [@enzolealcav](https://github.com/enzolealcav) | [elc@cesar.school](mailto:elc@cesar.school) |
+| Guilherme Alcântara Batista Alencar de Oliveira | [@guilhermeabaoliveira](https://github.com/guilhermeabaoliveira) | [gabao@cesar.school](mailto:gabao@cesar.school) |
+| Samuel Bernardi Sá | [@Samuel-Bernardi-Sa](https://github.com/Samuel-Bernardi-Sa) | [sbs@cesar.school](mailto:sbs@cesar.school) |
+| Pedro Henrique de Freitas Veloso | [@pedro-de-freitas](https://github.com/pedro-de-freitas) | [phfv2@cesar.school](mailto:phfv2@cesar.school) |
+| Maria Alice Rocha de Alcantara | [@mara768](https://github.com/mara768) | [mara@cesar.school](mailto:mara@cesar.school) |
+| Mateus Dias Dino | [@mateusdiasdino-lgtm](https://github.com/mateusdiasdino-lgtm) | [mdd@cesar.school](mailto:mdd@cesar.school) |
+| João Guilherme Sousa Gomes | [@Joao-Guilherme-Sousa-Gomes](https://github.com/Joao-Guilherme-Sousa-Gomes) | [jgsg@cesar.school](mailto:jgsg@cesar.school) |
+| João Victor Teixeira de Albuquerque Maranhão | [@jvtam-tech](https://github.com/jvtam-tech) | [jvtam@cesar.school](mailto:jvtam@cesar.school) |
 
 ## Dependências e direitos
 
