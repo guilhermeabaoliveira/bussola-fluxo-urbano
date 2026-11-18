@@ -58,11 +58,11 @@ O HC-SR04 mede distância; não classifica pessoas, cães ou outros alvos. Tecno
 
 | Integrante | GitHub | E-mail institucional |
 |---|---|---|
-| Enzo Leal Cavalcanti | [@enzolealcav](https://github.com/enzolealcav) | [elc@cesar.school](mailto:elc@cesar.school) |
 | Guilherme Alcântara Batista Alencar de Oliveira | [@guilhermeabaoliveira](https://github.com/guilhermeabaoliveira) | [gabao@cesar.school](mailto:gabao@cesar.school) |
-| Samuel Bernardi Sá | [@Samuel-Bernardi-Sa](https://github.com/Samuel-Bernardi-Sa) | [sbs@cesar.school](mailto:sbs@cesar.school) |
 | Pedro Henrique de Freitas Veloso | [@pedro-de-freitas](https://github.com/pedro-de-freitas) | [phfv2@cesar.school](mailto:phfv2@cesar.school) |
 | Maria Alice Rocha de Alcantara | [@mara768](https://github.com/mara768) | [mara@cesar.school](mailto:mara@cesar.school) |
+| Enzo Leal Cavalcanti | [@enzolealcav](https://github.com/enzolealcav) | [elc@cesar.school](mailto:elc@cesar.school) |
+| Samuel Bernardi Sá | [@Samuel-Bernardi-Sa](https://github.com/Samuel-Bernardi-Sa) | [sbs@cesar.school](mailto:sbs@cesar.school) |
 | Mateus Dias Dino | [@mateusdiasdino-lgtm](https://github.com/mateusdiasdino-lgtm) | [mdd@cesar.school](mailto:mdd@cesar.school) |
 | João Guilherme Sousa Gomes | [@Joao-Guilherme-Sousa-Gomes](https://github.com/Joao-Guilherme-Sousa-Gomes) | [jgsg@cesar.school](mailto:jgsg@cesar.school) |
 | João Victor Teixeira de Albuquerque Maranhão | [@jvtam-tech](https://github.com/jvtam-tech) | [jvtam@cesar.school](mailto:jvtam@cesar.school) |
