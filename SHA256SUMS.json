@@ -1,4 +1,5 @@
 {
+  ".gitattributes": "4559e978314bf9b9d4f1cd6c10b6b4bf23e5102571d63c714d5669756a3d88ff",
   ".gitignore": "b8c80abdaa5b163c8c96429bad024136562431138bce82b7a592f99f00693d5c",
   ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "ABRIR.html": "9cd26f33c2c362ea24d91d4f435d1fb41a6331574e2f39cdea0820c78bf01b2f",
@@ -31,7 +32,7 @@
   "blueprint/logic.js": "e64b942be61b458163d3d34f70a970ab8671e4f46ec94cfa0b6cfa5b82d7aa91",
   "blueprint/parts-data.js": "1acc812627cf5249a4f88dd03996826318ba1ade542993ab79b2489e48ee8df0",
   "blueprint/style.css": "391c63e42c42a3daab91edc708c5056e00f9df03c31be07ab1681f67cb604827",
-  "docs/escala-real.md": "f077418bab2305374ee72027cfabbbc7e6e6fd539cbcc1d867764eaef0806a65",
+  "docs/escala-real.md": "835eda1d167ba5a518ef3ee8868822d1fee52ca378452aed31ace7c3f11135f5",
   "docs/escopo.md": "5bad357a71c0386646845c9bd664e55bfeb9cfdbd6d66198b04e2345be3fda4e",
   "docs/manual.md": "3e8e01309b5fb3298b3bb60fb91e8d0bb4d9f0a3bf7376d6e239b2057be570cd",
   "docs/montagem.md": "b92cf9797b2c5a70e01758ade53c502420321853d4950401e86b0e48f006d145",
