@@ -1,0 +1,9 @@
+APRESENTAÇÃO DA MAQUETE
+
+Abra index.html para apresentar no navegador, com ou sem internet.
+Mantenha a pasta slides ao lado do HTML. Setas mudam slides, F ativa tela cheia.
+O arquivo PPTX permite editar textos e tabelas no PowerPoint ou aplicativo compatível.
+Atlas 3D e Blueprint são links relativos para as pastas irmãs do pacote completo.
+O portfólio público reúne os materiais de apresentação do projeto. Arquivos privados da equipe não integram esta publicação.
+
+Modelo e custos descrevem uma proposta. Medições, orçamento final e testes físicos seguem necessários.

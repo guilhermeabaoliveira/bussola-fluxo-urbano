@@ -1,0 +1,132 @@
+[
+  {
+    "file": "alvo.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "alvo_A.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "alvo_B.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "alvo_C.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "anteparo.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "anteparo_A.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "anteparo_B.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "anteparo_C.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "arduino.blend",
+    "scene": "Scene",
+    "objects": 46
+  },
+  {
+    "file": "base.blend",
+    "scene": "Scene",
+    "objects": 17
+  },
+  {
+    "file": "cabos-fonte.blend",
+    "scene": "Scene",
+    "objects": 24
+  },
+  {
+    "file": "cabos.blend",
+    "scene": "Scene",
+    "objects": 20
+  },
+  {
+    "file": "carenagem_fonte.blend",
+    "scene": "Scene",
+    "objects": 5
+  },
+  {
+    "file": "carenagem_protoboard.blend",
+    "scene": "Scene",
+    "objects": 5
+  },
+  {
+    "file": "carenagem_uno.blend",
+    "scene": "Scene",
+    "objects": 5
+  },
+  {
+    "file": "fonte.blend",
+    "scene": "Scene",
+    "objects": 4
+  },
+  {
+    "file": "ponteiro.blend",
+    "scene": "Scene",
+    "objects": 7
+  },
+  {
+    "file": "protoboard.blend",
+    "scene": "Scene",
+    "objects": 128
+  },
+  {
+    "file": "sensor-suporte.blend",
+    "scene": "Scene",
+    "objects": 12
+  },
+  {
+    "file": "sensor.blend",
+    "scene": "Scene",
+    "objects": 10
+  },
+  {
+    "file": "sensor_A.blend",
+    "scene": "Scene",
+    "objects": 12
+  },
+  {
+    "file": "sensor_B.blend",
+    "scene": "Scene",
+    "objects": 12
+  },
+  {
+    "file": "sensor_C.blend",
+    "scene": "Scene",
+    "objects": 12
+  },
+  {
+    "file": "servo.blend",
+    "scene": "Scene",
+    "objects": 4
+  },
+  {
+    "file": "suporte.blend",
+    "scene": "Scene",
+    "objects": 3
+  },
+  {
+    "file": "totem.blend",
+    "scene": "Scene",
+    "objects": 153
+  }
+]

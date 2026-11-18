@@ -1,0 +1,1145 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "units": "mm",
+  "status": "Proposta dimensional de bancada; ensaios reais, encaixes e corte ainda pendentes",
+  "sources": [
+    "../bancada-60x40/proposta-mecanica.md",
+    "../bancada-60x40/orcamento.md",
+    "../bancada-60x40/orcamento.csv",
+    "../ultrassonico/pinagem.md"
+  ],
+  "items": [
+    {
+      "id": "base",
+      "title": "Base e reforços",
+      "dimensionsMm": {
+        "width": 600,
+        "depth": 400,
+        "thickness": 3,
+        "reinforcements": [
+          [
+            594,
+            25,
+            3
+          ],
+          [
+            594,
+            25,
+            3
+          ],
+          [
+            344,
+            25,
+            3
+          ],
+          [
+            344,
+            25,
+            3
+          ]
+        ],
+        "feetDiameter": 20,
+        "feetHeight": 25,
+        "undersideDepth": 28
+      },
+      "material": "MDF nominal 3 mm; pés a confirmar",
+      "function": "Apoiar os módulos e manter envelope máximo de 600 × 400 mm.",
+      "kit": "Não consta do kit",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Medir espessura; reservar base inteira e chapa adicional. Plano de corte e quantidade final de chapas pendentes. Reforços e pés necessários conforme ensaio. Compartimentos técnicos são peças separadas no Atlas. Chapas e cortes dessas coberturas continuam sem quantidade/preço fechados.",
+      "modelDimensionsMm": {
+        "XYZ": [
+          600,
+          400,
+          3
+        ]
+      },
+      "reservationEnvelope": {
+        "planXY": [
+          600,
+          400
+        ],
+        "note": "Área máxima da montagem em planta; altura de pés/reforços separada"
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Mantém as três rotas e módulos posicionados na mesma bancada de 600×400 mm."
+    },
+    {
+      "id": "totem",
+      "title": "Totem vertical",
+      "dimensionsMm": {
+        "width": 60,
+        "depth": 35,
+        "height": 135,
+        "dialDiameter": 90,
+        "dialCenterZ": 120,
+        "overallHeight": 165
+      },
+      "material": "Caixa MDF, acabamento preto e mostrador fixo",
+      "function": "Apresentar orientação por ponteiro móvel.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Servo em suporte independente ajustável atrás da face. Abertura frontal deve permitir horn assentar integralmente no eixo original, acesso ao parafuso e giro livre; não presumir eixo atravessando MDF.",
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Transforma a decisão eletrônica em indicação física legível para quem chega à bifurcação."
+    },
+    {
+      "id": "sensor_A",
+      "title": "HC-SR04 · 4 pinos · via A",
+      "dimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "facePosition": [
+          30,
+          180,
+          60
+        ],
+        "moduleDimensionsStatus": "aproximação representativa; medir módulo recebido"
+      },
+      "material": "PCB e dois transdutores",
+      "function": "Medir distância lateral ao alvo/fundo; não identifica pessoas nem direção.",
+      "kit": "Um dos três fornecido; dois adicionais, sem atribuição nominal a esta via",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "hc_shared"
+      },
+      "assemblyNotes": "TRIG D2, ECHO D3; VCC de 5 V da UNO e GND comum. Fora do piso e atrás da face. Disparos sequenciais; ensaiar reflexos/cross-talk.",
+      "modelDimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "supportXYZ": [
+          3,
+          60,
+          85
+        ],
+        "footXYZ": [
+          35,
+          60,
+          3
+        ],
+        "sensingCenterHeight": 60,
+        "note": "Conjunto selecionado inclui suporte e pé; dimensões do HC são referência, não inspeção do kit."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Detecta a entrada e saída de um alvo naquela rota usando distância, sem contato com o piso.",
+      "verification": "Modelo identificado nas fotos do componente testado em 18/11/2026. Funcionamento de uma unidade relatado pelo grupo; conjunto de três ainda requer ensaio. Revisão da placa e dimensões devem ser medidas no exemplar adquirido."
+    },
+    {
+      "id": "alvo_A",
+      "title": "Alvo móvel — via A",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          60,
+          3
+        ],
+        "handle": [
+          30,
+          20,
+          3
+        ],
+        "centerZ": 60,
+        "presentDistance": 80,
+        "travelY": [
+          70,
+          275
+        ],
+        "returnLift": 80
+      },
+      "material": "MDF de 3 mm; pega e cantos suavizados",
+      "function": "Representar uma passagem de pessoa na demonstração; não é um humano em escala validada.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Transladar mantendo face e altura. Levantar 80 mm após cruzar, retornar com borda inferior em Z = 110 mm e baixar no estacionamento; retorno levantado não é nova passagem. Limiares iniciais entrada de 9 cm e saída de 12 cm, validar fisicamente.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          60
+        ],
+        "handleXYZ": [
+          3,
+          30,
+          20
+        ],
+        "panelCenterZ": 60,
+        "handleCenterZ": 100
+      },
+      "reservationEnvelope": {
+        "panelZ": [
+          30,
+          90
+        ],
+        "handleZ": [
+          90,
+          110
+        ],
+        "note": "Retorno elevado 80 mm; pega não modifica a altura do painel acústico"
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite repetir passagens conhecidas para demonstrar a contagem; é um painel manual de MDF, não um cartão eletrônico."
+    },
+    {
+      "id": "anteparo_A",
+      "title": "Anteparo de referência — via A",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          80,
+          3
+        ],
+        "facePosition": [
+          170,
+          180,
+          60
+        ],
+        "freeDistance": 140
+      },
+      "material": "MDF de 3 mm",
+      "function": "Oferecer referência de distância livre de 14 cm.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Anteparo não garante bloqueio do som, isolamento entre vias ou eco válido; instalar e testar cada célula. Não converter ausência de eco em passagem livre. Antes de fabricar, definir suporte entre placa e pé: o modelo atual apresenta um vão de 17 mm nessa fixação.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          80
+        ],
+        "footXYZ": [
+          30,
+          100,
+          3
+        ],
+        "note": "A espessura fica no eixo X; painel frontal tem 100×80 mm."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Fornece referência de caminho livre; não garante isolamento acústico entre rotas."
+    },
+    {
+      "id": "sensor_B",
+      "title": "HC-SR04 · 4 pinos · via B",
+      "dimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "facePosition": [
+          230,
+          180,
+          60
+        ],
+        "moduleDimensionsStatus": "aproximação representativa; medir módulo recebido"
+      },
+      "material": "PCB e dois transdutores",
+      "function": "Medir distância lateral ao alvo/fundo; não identifica pessoas nem direção.",
+      "kit": "Um dos três fornecido; dois adicionais, sem atribuição nominal a esta via",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "hc_shared"
+      },
+      "assemblyNotes": "TRIG D4, ECHO D5; VCC de 5 V da UNO e GND comum. Fora do piso e atrás da face. Disparos sequenciais; ensaiar reflexos/cross-talk.",
+      "modelDimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "supportXYZ": [
+          3,
+          60,
+          85
+        ],
+        "footXYZ": [
+          35,
+          60,
+          3
+        ],
+        "sensingCenterHeight": 60,
+        "note": "Conjunto selecionado inclui suporte e pé; dimensões do HC são referência, não inspeção do kit."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Detecta a entrada e saída de um alvo naquela rota usando distância, sem contato com o piso.",
+      "verification": "Modelo identificado nas fotos do componente testado em 18/11/2026. Funcionamento de uma unidade relatado pelo grupo; conjunto de três ainda requer ensaio. Revisão da placa e dimensões devem ser medidas no exemplar adquirido."
+    },
+    {
+      "id": "alvo_B",
+      "title": "Alvo móvel — via B",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          60,
+          3
+        ],
+        "handle": [
+          30,
+          20,
+          3
+        ],
+        "centerZ": 60,
+        "presentDistance": 80,
+        "travelY": [
+          70,
+          275
+        ],
+        "returnLift": 80
+      },
+      "material": "MDF de 3 mm; pega e cantos suavizados",
+      "function": "Representar uma passagem de pessoa na demonstração; não é um humano em escala validada.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Transladar mantendo face e altura. Levantar 80 mm após cruzar, retornar com borda inferior em Z = 110 mm e baixar no estacionamento; retorno levantado não é nova passagem. Limiares iniciais entrada de 9 cm e saída de 12 cm, validar fisicamente.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          60
+        ],
+        "handleXYZ": [
+          3,
+          30,
+          20
+        ],
+        "panelCenterZ": 60,
+        "handleCenterZ": 100
+      },
+      "reservationEnvelope": {
+        "panelZ": [
+          30,
+          90
+        ],
+        "handleZ": [
+          90,
+          110
+        ],
+        "note": "Retorno elevado 80 mm; pega não modifica a altura do painel acústico"
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite repetir passagens conhecidas para demonstrar a contagem; é um painel manual de MDF, não um cartão eletrônico."
+    },
+    {
+      "id": "anteparo_B",
+      "title": "Anteparo de referência — via B",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          80,
+          3
+        ],
+        "facePosition": [
+          370,
+          180,
+          60
+        ],
+        "freeDistance": 140
+      },
+      "material": "MDF de 3 mm",
+      "function": "Oferecer referência de distância livre de 14 cm.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Anteparo não garante bloqueio do som, isolamento entre vias ou eco válido; instalar e testar cada célula. Não converter ausência de eco em passagem livre. Antes de fabricar, definir suporte entre placa e pé: o modelo atual apresenta um vão de 17 mm nessa fixação.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          80
+        ],
+        "footXYZ": [
+          30,
+          100,
+          3
+        ],
+        "note": "A espessura fica no eixo X; painel frontal tem 100×80 mm."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Fornece referência de caminho livre; não garante isolamento acústico entre rotas."
+    },
+    {
+      "id": "sensor_C",
+      "title": "HC-SR04 · 4 pinos · via C",
+      "dimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "facePosition": [
+          430,
+          180,
+          60
+        ],
+        "moduleDimensionsStatus": "aproximação representativa; medir módulo recebido"
+      },
+      "material": "PCB e dois transdutores",
+      "function": "Medir distância lateral ao alvo/fundo; não identifica pessoas nem direção.",
+      "kit": "Um dos três fornecido; dois adicionais, sem atribuição nominal a esta via",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "hc_shared"
+      },
+      "assemblyNotes": "TRIG D6, ECHO D7; VCC de 5 V da UNO e GND comum. Fora do piso e atrás da face. Disparos sequenciais; ensaiar reflexos/cross-talk.",
+      "modelDimensionsMm": {
+        "moduleApprox": [
+          45,
+          20,
+          15
+        ],
+        "supportXYZ": [
+          3,
+          60,
+          85
+        ],
+        "footXYZ": [
+          35,
+          60,
+          3
+        ],
+        "sensingCenterHeight": 60,
+        "note": "Conjunto selecionado inclui suporte e pé; dimensões do HC são referência, não inspeção do kit."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Detecta a entrada e saída de um alvo naquela rota usando distância, sem contato com o piso.",
+      "verification": "Modelo identificado nas fotos do componente testado em 18/11/2026. Funcionamento de uma unidade relatado pelo grupo; conjunto de três ainda requer ensaio. Revisão da placa e dimensões devem ser medidas no exemplar adquirido."
+    },
+    {
+      "id": "alvo_C",
+      "title": "Alvo móvel — via C",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          60,
+          3
+        ],
+        "handle": [
+          30,
+          20,
+          3
+        ],
+        "centerZ": 60,
+        "presentDistance": 80,
+        "travelY": [
+          70,
+          275
+        ],
+        "returnLift": 80
+      },
+      "material": "MDF de 3 mm; pega e cantos suavizados",
+      "function": "Representar uma passagem de pessoa na demonstração; não é um humano em escala validada.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Transladar mantendo face e altura. Levantar 80 mm após cruzar, retornar com borda inferior em Z = 110 mm e baixar no estacionamento; retorno levantado não é nova passagem. Limiares iniciais entrada de 9 cm e saída de 12 cm, validar fisicamente.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          60
+        ],
+        "handleXYZ": [
+          3,
+          30,
+          20
+        ],
+        "panelCenterZ": 60,
+        "handleCenterZ": 100
+      },
+      "reservationEnvelope": {
+        "panelZ": [
+          30,
+          90
+        ],
+        "handleZ": [
+          90,
+          110
+        ],
+        "note": "Retorno elevado 80 mm; pega não modifica a altura do painel acústico"
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite repetir passagens conhecidas para demonstrar a contagem; é um painel manual de MDF, não um cartão eletrônico."
+    },
+    {
+      "id": "anteparo_C",
+      "title": "Anteparo de referência — via C",
+      "dimensionsMm": {
+        "panel": [
+          100,
+          80,
+          3
+        ],
+        "facePosition": [
+          570,
+          180,
+          60
+        ],
+        "freeDistance": 140
+      },
+      "material": "MDF de 3 mm",
+      "function": "Oferecer referência de distância livre de 14 cm.",
+      "kit": "Construção adicional",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "mdf_shared"
+      },
+      "assemblyNotes": "Anteparo não garante bloqueio do som, isolamento entre vias ou eco válido; instalar e testar cada célula. Não converter ausência de eco em passagem livre. Antes de fabricar, definir suporte entre placa e pé: o modelo atual apresenta um vão de 17 mm nessa fixação.",
+      "modelDimensionsMm": {
+        "panelXYZ": [
+          3,
+          100,
+          80
+        ],
+        "footXYZ": [
+          30,
+          100,
+          3
+        ],
+        "note": "A espessura fica no eixo X; painel frontal tem 100×80 mm."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Fornece referência de caminho livre; não garante isolamento acústico entre rotas."
+    },
+    {
+      "id": "arduino",
+      "title": "Arduino UNO",
+      "dimensionsMm": {
+        "boardApprox": [
+          68.6,
+          53.4
+        ]
+      },
+      "material": "Placa eletrônica do kit",
+      "function": "Processar estados, contar entradas por janela de 10 s e comandar servo.",
+      "kit": "Uma UNO informada no kit e identificada nas fotos de 21/10.",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "kit_existing"
+      },
+      "assemblyNotes": "USB para placa e monitor serial; servomotor com positivo separado. GND comum. Dimensões aproximadas; furos e conectores reais a medir.",
+      "modelDimensionsMm": {
+        "pcbXYZ": [
+          68.6,
+          53.4,
+          1.6
+        ],
+        "pcbCenterXYZ": [
+          270,
+          42,
+          8
+        ],
+        "note": "Placa e conectores ilustrativos; não gabarito do exemplar recebido."
+      },
+      "reservationEnvelope": {
+        "planXY": [
+          100,
+          75
+        ],
+        "note": "Reserva de organização; não medida do PCB."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Executa a contagem por rota e a comparação da janela comum, sem identificar pessoas."
+    },
+    {
+      "id": "protoboard",
+      "title": "Protoboard e barramentos",
+      "dimensionsMm": {
+        "status": "Medir exemplar real830; reserva não é medida de catálogo da peça"
+      },
+      "material": "Protoboard830 do kit",
+      "function": "Distribuir 5 V dos sensores e GND comum.",
+      "kit": "Uma documentada",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "kit_existing"
+      },
+      "assemblyNotes": "Verificar interrupções dos trilhos e continuidade; não unir positivo externo servo com positivo UNO. Reserva não comprova encaixe.",
+      "modelDimensionsMm": {
+        "XYZ": [
+          165,
+          55,
+          10
+        ]
+      },
+      "reservationEnvelope": {
+        "XYZ": [
+          200,
+          80,
+          10
+        ],
+        "positionXY": [
+          350,
+          5
+        ]
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite montar a distribuição elétrica provisória sem fabricar uma placa própria."
+    },
+    {
+      "id": "cabos",
+      "title": "Chicotes e conexões",
+      "dimensionsMm": {
+        "sensorCableTotalLength": 3000,
+        "sensorRunsAllowance": [
+          700,
+          700,
+          700
+        ],
+        "remainingAllowance": 900,
+        "kitJumpersLength": null
+      },
+      "material": "Cabo manga4×26AWG e conectores; jumpers",
+      "function": "Conectar cada pino de sinal e os barramentos por percursos organizados sob a base.",
+      "kit": "Jumpers informados no kit; quantidade e comprimento útil precisam de contagem e medição. A etiqueta fotografada indica 20, enquanto o inventário anterior informava 40.",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "cables_shared"
+      },
+      "assemblyNotes": "Cada chicote HC possui VCC, TRIG, ECHO e GND. O 3D identifica as duas pontas; selecione o circuito e depois uma ligação para acompanhá-la. Percursos seguem sob a base e retornam por passagens próprias. Comprimento final, terminais e alívio de tração dependem da montagem física.",
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Transportam sinais e alimentação entre módulos que ficam em posições distintas."
+    },
+    {
+      "id": "fonte",
+      "title": "Fonte externa do servo",
+      "dimensionsMm": {
+        "dimensions": null,
+        "connector": "P4; diâmetro/polaridade a confirmar"
+      },
+      "material": "Fonte regulada externa de 5 V e adaptador borne",
+      "function": "Alimentar servo separadamente.",
+      "kit": "Disponibilidade no kit/laboratório não confirmada",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "power_shared"
+      },
+      "assemblyNotes": "Referência de 5 V e 5 A: 5 A é capacidade, não consumo. UNO por USB; GND comum e positivos separados. Fonte de rede fora da caixa. Não ligar 5 V no jack UNO.",
+      "modelDimensionsMm": {
+        "bodyXYZ": [
+          90,
+          50,
+          30
+        ],
+        "bodyCenterXYZ": [
+          173,
+          45,
+          18
+        ],
+        "note": "Envelope ilustrativo de fonte; formato, tamanho e cabo reais ainda não conferidos."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Fornece alimentação externa adequada ao servo, mantendo terra comum com a UNO."
+    },
+    {
+      "id": "ponteiro",
+      "title": "Ponteiro leve e horn",
+      "dimensionsMm": {
+        "usefulRadius": 37,
+        "maxWidth": 8,
+        "targetMassGramsLessThan": 2,
+        "initialAxialClearance": 2,
+        "tailLength": 9
+      },
+      "material": "Cartolina/acetato leve no horn original",
+      "function": "Exibir A a 40°, B a 90°, C a 140° e posição neutra a 15°. Os ângulos são comandos do servo, não azimutes geográficos.",
+      "kit": "Horn/parafuso original a conferir; material leve não confirmado",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "fixation_shared"
+      },
+      "assemblyNotes": "Sem estrias cortadas em MDF, extensão de eixo colada ou parafuso genérico. Fixação não deve obstruir cubo/parafuso. Ensaiar sem atrito e ajustar abertura/suporte.",
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Mostra fisicamente a rota escolhida pelo algoritmo; não mede fluxo por si só."
+    },
+    {
+      "id": "servo",
+      "title": "Microservo SG90",
+      "dimensionsMm": {
+        "status": "Dimensões do exemplar real/plaqueta/horn a conferir; representação orientada no modelo"
+      },
+      "material": "Servo e horn original",
+      "function": "Movimentar ponteiro somente; disco e caixa fixos.",
+      "kit": "Um SG90 documentado",
+      "additionalCost": {
+        "unitBrl": null,
+        "quantity": null,
+        "subtotal": null,
+        "source": null,
+        "confidence": "Custo compartilhado ou não cotado; consultar alocação global, não somar por objeto.",
+        "allocation": "kit_existing"
+      },
+      "assemblyNotes": "SinalD9; positivo externo regulado compatível e GND comum. Confirmar tensão/curso da unidade. Montar horn em90° com ponteiro para cima, sem forçar batentes.",
+      "modelDimensionsMm": {
+        "bodyXYZ": [
+          23,
+          29,
+          12.2
+        ],
+        "axisConvention": "X/largura, Y/profundidade, Z/altura; eixo do servo horizontal",
+        "referenceUnoriented": [
+          23,
+          12.2,
+          29
+        ]
+      },
+      "reservationEnvelope": {
+        "dimensions": null,
+        "note": "Reserva deve ser ajustada ao módulo/horn medido e à abertura frontal; antigo envelope24×23×29 não é medida física confirmada"
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Converte o comando angular do Arduino em movimento do ponteiro."
+    },
+    {
+      "id": "carenagem_uno",
+      "title": "Compartimento técnico — UNO",
+      "dimensionsMm": {
+        "width": 92,
+        "depth": 65,
+        "lidThickness": 3,
+        "wallHeight": 25,
+        "wallThickness": 3,
+        "overallHeight": 26.5
+      },
+      "material": "MDF nominal de 3 mm com acabamento preto",
+      "function": "Cobrir e organizar UNO na apresentação, com tampa removível para acesso técnico. Não possui função de sensor nem vedação certificada.",
+      "kit": "Construção adicional; não fornecida como peça pronta no kit",
+      "assemblyNotes": "Proposta aberta na traseira; prever saídas de cabos e manutenção. Recalcular plano de corte e encaixes com o módulo recebido. Não constitui invólucro certificado de fonte de rede.",
+      "additionalCost": {
+        "subtotal": null,
+        "allocation": "mdf_shared",
+        "confidence": "MDF compartilhado: carenagens exigem novo plano de corte; orçamento anterior não é total fechado."
+      },
+      "modelDimensionsMm": {
+        "outerPlanXY": [
+          92,
+          65
+        ],
+        "internalWidth": 86,
+        "note": "Altura total inclui meia espessura da tampa na coordenada definida; medir encaixes antes de cortar."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite esconder a eletrônica na apresentação e abrir para inspeção/manutenção."
+    },
+    {
+      "id": "carenagem_protoboard",
+      "title": "Compartimento técnico — protoboard",
+      "dimensionsMm": {
+        "width": 176,
+        "depth": 66,
+        "lidThickness": 3,
+        "wallHeight": 25,
+        "wallThickness": 3,
+        "overallHeight": 26.5
+      },
+      "material": "MDF nominal de 3 mm com acabamento preto",
+      "function": "Cobrir e organizar protoboard na apresentação, com tampa removível para acesso técnico. Não possui função de sensor nem vedação certificada.",
+      "kit": "Construção adicional; não fornecida como peça pronta no kit",
+      "assemblyNotes": "Proposta aberta na traseira; prever saídas de cabos e manutenção. Recalcular plano de corte e encaixes com o módulo recebido. Não constitui invólucro certificado de fonte de rede.",
+      "additionalCost": {
+        "subtotal": null,
+        "allocation": "mdf_shared",
+        "confidence": "MDF compartilhado: carenagens exigem novo plano de corte; orçamento anterior não é total fechado."
+      },
+      "modelDimensionsMm": {
+        "outerPlanXY": [
+          176,
+          66
+        ],
+        "internalWidth": 170,
+        "note": "Altura total inclui meia espessura da tampa na coordenada definida; medir encaixes antes de cortar."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite esconder a eletrônica na apresentação e abrir para inspeção/manutenção."
+    },
+    {
+      "id": "carenagem_fonte",
+      "title": "Compartimento técnico — fonte",
+      "dimensionsMm": {
+        "width": 102,
+        "depth": 70,
+        "lidThickness": 3,
+        "wallHeight": 40,
+        "wallThickness": 3,
+        "overallHeight": 41.5
+      },
+      "material": "MDF nominal de 3 mm com acabamento preto",
+      "function": "Cobrir e organizar fonte na apresentação, com tampa removível para acesso técnico. Não possui função de sensor nem vedação certificada.",
+      "kit": "Construção adicional; não fornecida como peça pronta no kit",
+      "assemblyNotes": "Proposta aberta na traseira; prever saídas de cabos e manutenção. Recalcular plano de corte e encaixes com o módulo recebido. Não constitui invólucro certificado de fonte de rede.",
+      "additionalCost": {
+        "subtotal": null,
+        "allocation": "mdf_shared",
+        "confidence": "MDF compartilhado: carenagens exigem novo plano de corte; orçamento anterior não é total fechado."
+      },
+      "modelDimensionsMm": {
+        "outerPlanXY": [
+          102,
+          70
+        ],
+        "internalWidth": 96,
+        "note": "Altura total inclui meia espessura da tampa na coordenada definida; medir encaixes antes de cortar."
+      },
+      "dimensionalStatus": "Escala geométrica 1:1 da bancada. Dimensões em mm são da proposta/modelo; não são medições do kit nem escala de uma rua real.",
+      "necessity": "Permite esconder a eletrônica na apresentação e abrir para inspeção/manutenção."
+    }
+  ],
+  "costAllocations": {
+    "mdf_shared": {
+      "description": "Duas chapas para toda a montagem, não por objeto; quantidade provisória sem nesting final",
+      "quantity": 2,
+      "unitBrl": 7.99,
+      "subtotal": 15.98,
+      "source": "https://shopee.com.br/Placa-Lisa-de-Mdf-Cru-3mm-Decora%C3%A7%C3%A3o-60x40-cm-01-unidade-corte-a-laser-e-n%C3%A3o-precisa-lixar.-i.420356029.10174404240",
+      "confidence": "Preço indexado e estoque a reconfirmar"
+    },
+    "hc_shared": {
+      "description": "Grupo dos trêsHC:1/3 no kit,2/3 adicionais. Não determina qual rota recebe o módulo do kit.",
+      "quantity": 2,
+      "unitBrl": 9.4,
+      "subtotal": 18.8,
+      "source": "https://www.makerhero.com/produto/sensor-de-distancia-ultrassonico-hc-sr04/",
+      "confidence": "Referência de loja; reconfirmar"
+    },
+    "cables_shared": {
+      "description": "Uma compra compartilhada: 3 m de cabo por R$ 13,50 e um pacote de 40 jumpers por R$ 11,90. Terminais e cabeamento do servo ainda precisam ser cotados.",
+      "subtotal": 25.4,
+      "source": [
+        "https://www.rsrobotica.com.br/produto/cabo-manga-4x26-awg-palha.html",
+        "https://www.casadoresistor.com.br/jumper-macho-x-femea-20cm-40-unidades"
+      ],
+      "confidence": "Produtos cotados; montagem e terminações não cotadas"
+    },
+    "power_shared": {
+      "description": "Fonte49.90 + adaptador3.90 somente cenário recomendado",
+      "subtotal": 53.8,
+      "source": [
+        "https://www.robocore.net/fonte/fonte-chaveada-5v-5a",
+        "https://www.robocore.net/conector/conector-adaptador-p4-femea-borne/?newlang=brazilian"
+      ],
+      "confidence": "Referência de categoria; encaixe/polaridade a conferir"
+    },
+    "fixation_shared": {
+      "description": "Um rolo fita20.00 no recomendado; demais fixadores/cola/material ponteiro pendentes",
+      "subtotal": 20.0,
+      "source": "https://neotecnologica.com.br/lojavirtual/produto/fita-dupla-face-fina/",
+      "confidence": "Preço de referência; compatibilidade e consumo a validar"
+    },
+    "kit_existing": {
+      "description": "Custo incremental dos itens documentados já fornecidos; não é valor de mercado",
+      "subtotal": 0,
+      "confidence": "Inventário informado pelo grupo; fotos complementares identificam UNO, protoboard e jumpers. Não é ensaio elétrico."
+    }
+  },
+  "budget": {
+    "currency": "BRL",
+    "minimumSubtotal": 60.18,
+    "recommendedSubtotal": 133.98,
+    "summin": 60.18,
+    "recommended": 133.98,
+    "exclusions": [
+      "Fretes",
+      "Corte e corpo de prova",
+      "Terminações/crimpagem dos chicotes",
+      "Cabeamento e conexão adequada de alimentação do servo",
+      "Fixadores/parafusos/cola/pés/material leve não disponíveis",
+      "Chapas extras se plano de corte exigir",
+      "Carenagens removíveis da faixa técnica e acabamento visual: quantidade de MDF/corte a recalcular"
+    ],
+    "minimumConditions": "Fonte/conexão/fixação adequadas fornecidas pelo laboratório/grupo, ainda não confirmadas",
+    "lineItems": [
+      {
+        "id": "budget_0",
+        "category": "kit",
+        "title": "Arduino UNO",
+        "unitBrl": 0.0,
+        "quantity": 1.0,
+        "subtotal": 0.0,
+        "source": null,
+        "scenario": "ambos",
+        "notes": "Uma placa no kit informado; identificada nas fotos. Custo adicional zero, não valor de mercado."
+      },
+      {
+        "id": "budget_1",
+        "category": "kit",
+        "title": "SG90",
+        "unitBrl": 0.0,
+        "quantity": 1.0,
+        "subtotal": 0.0,
+        "source": null,
+        "scenario": "ambos",
+        "notes": "Inventário documentado; horn/parafuso original a conferir"
+      },
+      {
+        "id": "budget_2",
+        "category": "kit",
+        "title": "HC-SR04 existente",
+        "unitBrl": 0.0,
+        "quantity": 1.0,
+        "subtotal": 0.0,
+        "source": null,
+        "scenario": "ambos",
+        "notes": "Um no kit; três no total após comprar dois"
+      },
+      {
+        "id": "budget_3",
+        "category": "kit",
+        "title": "Protoboard 830 e jumpers macho-macho",
+        "unitBrl": 0.0,
+        "quantity": 1.0,
+        "subtotal": 0.0,
+        "source": null,
+        "scenario": "ambos",
+        "notes": "Protoboard e jumpers visíveis. Quantidade informada anteriormente: 40; etiqueta fotografada: 20. Contagem individual e alcance a conferir."
+      },
+      {
+        "id": "budget_4",
+        "category": "adicional",
+        "title": "HC-SR04 extra",
+        "unitBrl": 9.4,
+        "quantity": 2.0,
+        "subtotal": 18.8,
+        "source": "https://www.makerhero.com/produto/sensor-de-distancia-ultrassonico-hc-sr04/",
+        "scenario": "ambos",
+        "notes": "MakerHero preço regular; Pix não utilizado"
+      },
+      {
+        "id": "budget_5",
+        "category": "adicional",
+        "title": "MDF cru 3 mm 60x40 cm",
+        "unitBrl": 7.99,
+        "quantity": 2.0,
+        "subtotal": 15.98,
+        "source": "https://shopee.com.br/Placa-Lisa-de-Mdf-Cru-3mm-Decora%C3%A7%C3%A3o-60x40-cm-01-unidade-corte-a-laser-e-n%C3%A3o-precisa-lixar.-i.420356029.10174404240",
+        "scenario": "ambos",
+        "notes": "MKT DESIGN; 1 base inteira + 1 chapa adicional provisória; plano de corte pendente; preço indexado mês anterior"
+      },
+      {
+        "id": "budget_6",
+        "category": "adicional",
+        "title": "Jumpers macho-fêmea 20 cm",
+        "unitBrl": 11.9,
+        "quantity": 1.0,
+        "subtotal": 11.9,
+        "source": "https://www.casadoresistor.com.br/jumper-macho-x-femea-20cm-40-unidades",
+        "scenario": "ambos",
+        "notes": "Pacote inteiro; extensões/conexões a conferir; preço indexado não checkout"
+      },
+      {
+        "id": "budget_7",
+        "category": "condicional",
+        "title": "Fonte regulada 5 V 5 A P4",
+        "unitBrl": 49.9,
+        "quantity": 1.0,
+        "subtotal": 49.9,
+        "source": "https://www.robocore.net/fonte/fonte-chaveada-5v-5a",
+        "scenario": "recomendado",
+        "notes": "Servo separado; UNO USB; GND comum; preço na categoria RoboCore /power-supply"
+      },
+      {
+        "id": "budget_8",
+        "category": "condicional",
+        "title": "Adaptador P4 fêmea borne",
+        "unitBrl": 3.9,
+        "quantity": 1.0,
+        "subtotal": 3.9,
+        "source": "https://www.robocore.net/conector/conector-adaptador-p4-femea-borne/?newlang=brazilian",
+        "scenario": "recomendado",
+        "notes": "Confirmar diâmetro/polaridade da fonte; preço categoria /conector"
+      },
+      {
+        "id": "budget_9",
+        "category": "condicional",
+        "title": "Fita dupla face fina",
+        "unitBrl": 20.0,
+        "quantity": 1.0,
+        "subtotal": 20.0,
+        "source": "https://neotecnologica.com.br/lojavirtual/produto/fita-dupla-face-fina/",
+        "scenario": "recomendado",
+        "notes": "Fixação leve/ponteiro ao horn; não substitui parafusos do motor nem valida aderência"
+      },
+      {
+        "id": "budget_10",
+        "category": "material_faculdade",
+        "title": "Cartolina/acetato leve; cola; fios; fixadores; pés",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": null,
+        "scenario": "a confirmar",
+        "notes": "Reaproveitar se disponível; não presumido gratuito; ponteiro meta menor que 2 g"
+      },
+      {
+        "id": "budget_11",
+        "category": "condicional",
+        "title": "Horn e parafuso central SG90 / parafusos abas",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": null,
+        "scenario": "a confirmar",
+        "notes": "Conferir recebidos; sem cotação compatível; não inventar rosca universal"
+      },
+      {
+        "id": "budget_12",
+        "category": "condicional",
+        "title": "Chapas e extensões adicionais",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": "https://shopee.com.br/Placa-Lisa-de-Mdf-Cru-3mm-Decora%C3%A7%C3%A3o-60x40-cm-01-unidade-corte-a-laser-e-n%C3%A3o-precisa-lixar.-i.420356029.10174404240",
+        "scenario": "a confirmar",
+        "notes": "Quantidade depende nesting/reforços/percurso real; cada chapa extra da referência adiciona 7.99 sem frete"
+      },
+      {
+        "id": "budget_13",
+        "category": "frete",
+        "title": "Fretes por vendedor",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": null,
+        "scenario": "a confirmar",
+        "notes": "Sem CEP/carrinho; não assumir cupom ou frete grátis"
+      },
+      {
+        "id": "budget_14",
+        "category": "corte",
+        "title": "Corte laser e corpo de prova",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": null,
+        "scenario": "a confirmar",
+        "notes": "Faculdade/máquina/kerf não confirmados; envelope 600x400 não significa chapa suficiente"
+      },
+      {
+        "id": "budget_15",
+        "category": "adicional",
+        "title": "Cabo manga 4 vias 26 AWG sem blindagem",
+        "unitBrl": 4.5,
+        "quantity": 3.0,
+        "subtotal": 13.5,
+        "source": "https://www.rsrobotica.com.br/produto/cabo-manga-4x26-awg-palha.html",
+        "scenario": "ambos",
+        "notes": "Três chicotes sensores até 0.70 m e folga; terminações separadas a definir; não serve como compra final completa"
+      },
+      {
+        "id": "budget_16",
+        "category": "condicional",
+        "title": "Terminações cabo: conectores fêmea HC e macho UNO / emendas",
+        "unitBrl": null,
+        "quantity": 1.0,
+        "subtotal": null,
+        "source": null,
+        "scenario": "a confirmar",
+        "notes": "Preferir chicote crimpado por laboratório com alívio de tração; sem cotação de terminais/ferramenta/serviço. Não ligar fio nu em pinos nem encadear três jumpers soltos."
+      }
+    ],
+    "note": "Somar lineItems dos cenários; não somar additionalCost dos objetos às alocações compartilhadas. Todos são subtotais, não custo fechado."
+  },
+  "revisionDate": "2026-10-21",
+  "kitReviewDate": "2026-10-22",
+  "kitEvidenceNote": "Kit mantido conforme informado pelo grupo. As fotos complementam a identificação, sem substituir o inventário declarado. Medidas e contagem individual dos jumpers não foram aferidas.",
+  "sensorConfirmation": {
+    "date": "2026-11-18",
+    "model": "HC-SR04",
+    "interface": [
+      "VCC",
+      "TRIG",
+      "ECHO",
+      "GND"
+    ],
+    "supplyV": 5,
+    "testEvidence": "Relato do usuário: teste de uma unidade funcionou; sem série de medições anexada.",
+    "purchaseQuantityRequested": 3
+  }
+}

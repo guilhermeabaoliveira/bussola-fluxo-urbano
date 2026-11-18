@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="365" viewBox="0 0 760 365">
+<rect width="760" height="365" fill="#f5f8fc"/>
+<g font-family="Segoe UI, sans-serif" fill="#172a40">
+<text x="30" y="45" font-size="24" font-weight="700">Bússola · Teste de um HC-SR04</text>
+<text x="30" y="73" font-size="15">04/11/2026 · Ligações diretas com quatro jumpers</text>
+<rect x="30" y="97" width="190" height="204" rx="12" fill="#e5edf8"/>
+<rect x="540" y="97" width="190" height="204" rx="12" fill="#e5edf8"/>
+<text x="48" y="126" font-size="19" font-weight="700">Arduino UNO</text>
+<text x="558" y="126" font-size="19" font-weight="700">HC-SR04</text>
+<text x="196" y="165" text-anchor="end" font-size="17">5 V</text><path d="M220 159H540" stroke="#bd283d" stroke-width="5"/><text x="558" y="165" font-size="17">VCC</text>
+<text x="196" y="204" text-anchor="end" font-size="17">D2</text><path d="M220 198H540" stroke="#a15b00" stroke-width="5"/><text x="558" y="204" font-size="17">TRIG</text>
+<text x="196" y="243" text-anchor="end" font-size="17">D3</text><path d="M220 237H540" stroke="#1569aa" stroke-width="5"/><text x="558" y="243" font-size="17">ECHO</text>
+<text x="196" y="282" text-anchor="end" font-size="17">GND</text><path d="M220 276H540" stroke="#273240" stroke-width="5"/><text x="558" y="282" font-size="17">GND</text>
+<text x="30" y="331" font-size="14">Leia os nomes impressos no módulo. A posição no desenho é esquemática.</text>
+<text x="30" y="352" font-size="14">Monitor Serial a 9600 baud · Alvo plano de frente a 8, 14 e 30 cm</text>
+</g></svg>

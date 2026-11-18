@@ -1,0 +1,16 @@
+import {build} from 'esbuild';
+import {readFile,writeFile} from 'node:fs/promises';
+await build({entryPoints:['viewer.mjs'],bundle:true,format:'esm',target:['es2022'],outfile:'viewer.bundle.js',sourcemap:false,minify:true,legalComments:'eof'});
+const source=await readFile('viewer.mjs','utf8');
+const imports=source.match(/^import .*;$/gm).join('\n');
+const body=source.replace(/^import .*;$/gm,'');
+const offline=await build({stdin:{contents:imports+'\n(async()=>{\n'+body+'\n})();',resolveDir:process.cwd(),sourcefile:'atlas-offline.mjs',loader:'js'},bundle:true,format:'iife',target:['es2022'],write:false,minify:true,legalComments:'eof'});
+const data={catalog:JSON.parse(await readFile('catalog.json','utf8')),manifest:JSON.parse(await readFile('scene-manifest.json','utf8')),glbBase64:(await readFile('modelos/bancada-completa.glb')).toString('base64')};
+const safe=s=>s.replace(/<\/script/gi,'<\\/script');
+let html=await readFile('index.html','utf8');
+const inlineStyle='<style>'+await readFile('styles.css','utf8')+'</style>';
+html=html.replace(/<link rel="stylesheet" href="styles.css[^"]*">/,()=>inlineStyle);
+const inlineScript='<script type="application/json" id="atlas-data">'+safe(JSON.stringify(data))+'</script><script>'+safe(offline.outputFiles[0].text)+'</script>';
+html=html.replace('<script type="module" src="viewer.bundle.js"></script>',()=>inlineScript);
+await writeFile('atlas-autonomo.html',html);
+console.log('viewer.bundle.js pronto: ThreeJS, OrbitControls, GLTFLoader e modelo lógico locais.');

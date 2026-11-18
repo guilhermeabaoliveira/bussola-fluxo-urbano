@@ -1,0 +1,260 @@
+{
+  "catalog_ids": 17,
+  "files": {
+    "base.blend": {
+      "exists": true,
+      "bytes": 319310
+    },
+    "base.glb": {
+      "exists": true,
+      "bytes": 51652
+    },
+    "totem.blend": {
+      "exists": true,
+      "bytes": 516721
+    },
+    "totem.glb": {
+      "exists": true,
+      "bytes": 93496
+    },
+    "sensor_A.blend": {
+      "exists": true,
+      "bytes": 314918
+    },
+    "sensor_A.glb": {
+      "exists": true,
+      "bytes": 47012
+    },
+    "alvo_A.blend": {
+      "exists": true,
+      "bytes": 198544
+    },
+    "alvo_A.glb": {
+      "exists": true,
+      "bytes": 7112
+    },
+    "anteparo_A.blend": {
+      "exists": true,
+      "bytes": 171788
+    },
+    "anteparo_A.glb": {
+      "exists": true,
+      "bytes": 3692
+    },
+    "sensor_B.blend": {
+      "exists": true,
+      "bytes": 314918
+    },
+    "sensor_B.glb": {
+      "exists": true,
+      "bytes": 47000
+    },
+    "alvo_B.blend": {
+      "exists": true,
+      "bytes": 198544
+    },
+    "alvo_B.glb": {
+      "exists": true,
+      "bytes": 7108
+    },
+    "anteparo_B.blend": {
+      "exists": true,
+      "bytes": 171788
+    },
+    "anteparo_B.glb": {
+      "exists": true,
+      "bytes": 3688
+    },
+    "sensor_C.blend": {
+      "exists": true,
+      "bytes": 314918
+    },
+    "sensor_C.glb": {
+      "exists": true,
+      "bytes": 46996
+    },
+    "alvo_C.blend": {
+      "exists": true,
+      "bytes": 198544
+    },
+    "alvo_C.glb": {
+      "exists": true,
+      "bytes": 7108
+    },
+    "anteparo_C.blend": {
+      "exists": true,
+      "bytes": 171788
+    },
+    "anteparo_C.glb": {
+      "exists": true,
+      "bytes": 3688
+    },
+    "arduino.blend": {
+      "exists": true,
+      "bytes": 289282
+    },
+    "arduino.glb": {
+      "exists": true,
+      "bytes": 22384
+    },
+    "protoboard.blend": {
+      "exists": true,
+      "bytes": 972593
+    },
+    "protoboard.glb": {
+      "exists": true,
+      "bytes": 196872
+    },
+    "cabos.blend": {
+      "exists": true,
+      "bytes": 299281
+    },
+    "cabos.glb": {
+      "exists": true,
+      "bytes": 41928
+    },
+    "fonte.blend": {
+      "exists": true,
+      "bytes": 200300
+    },
+    "fonte.glb": {
+      "exists": true,
+      "bytes": 5416
+    },
+    "ponteiro.blend": {
+      "exists": true,
+      "bytes": 238842
+    },
+    "ponteiro.glb": {
+      "exists": true,
+      "bytes": 24580
+    },
+    "servo.blend": {
+      "exists": true,
+      "bytes": 200909
+    },
+    "servo.glb": {
+      "exists": true,
+      "bytes": 11928
+    }
+  },
+  "all_catalog_files_exist": true,
+  "assembly_nodes": 273,
+  "animations": 4,
+  "dynamic_nodes": {
+    "alvo_A": [
+      0.11000000685453415,
+      0,
+      -0.07000000029802322
+    ],
+    "alvo_B": [
+      0.3100000023841858,
+      0,
+      -0.07000000029802322
+    ],
+    "alvo_C": [
+      0.5100000500679016,
+      0,
+      -0.07000000029802322
+    ],
+    "ponteiro": [
+      0.30000001192092896,
+      0.12000000476837158,
+      -0.3743000030517578
+    ]
+  },
+  "network_edges": [
+    {
+      "id": "HC_A_VCC__BB5V",
+      "from": "HC_A_VCC",
+      "to": "BB5V"
+    },
+    {
+      "id": "HC_A_TRIG__UNO_D2",
+      "from": "HC_A_TRIG",
+      "to": "UNO_D2"
+    },
+    {
+      "id": "HC_A_ECHO__UNO_D3",
+      "from": "HC_A_ECHO",
+      "to": "UNO_D3"
+    },
+    {
+      "id": "HC_A_GND__BBGND",
+      "from": "HC_A_GND",
+      "to": "BBGND"
+    },
+    {
+      "id": "HC_B_VCC__BB5V",
+      "from": "HC_B_VCC",
+      "to": "BB5V"
+    },
+    {
+      "id": "HC_B_TRIG__UNO_D4",
+      "from": "HC_B_TRIG",
+      "to": "UNO_D4"
+    },
+    {
+      "id": "HC_B_ECHO__UNO_D5",
+      "from": "HC_B_ECHO",
+      "to": "UNO_D5"
+    },
+    {
+      "id": "HC_B_GND__BBGND",
+      "from": "HC_B_GND",
+      "to": "BBGND"
+    },
+    {
+      "id": "HC_C_VCC__BB5V",
+      "from": "HC_C_VCC",
+      "to": "BB5V"
+    },
+    {
+      "id": "HC_C_TRIG__UNO_D6",
+      "from": "HC_C_TRIG",
+      "to": "UNO_D6"
+    },
+    {
+      "id": "HC_C_ECHO__UNO_D7",
+      "from": "HC_C_ECHO",
+      "to": "UNO_D7"
+    },
+    {
+      "id": "HC_C_GND__BBGND",
+      "from": "HC_C_GND",
+      "to": "BBGND"
+    },
+    {
+      "id": "UNO5V__BB5V",
+      "from": "UNO5V",
+      "to": "BB5V"
+    },
+    {
+      "id": "UNOGND__BBGND",
+      "from": "UNOGND",
+      "to": "BBGND"
+    },
+    {
+      "id": "servo_D9__UNO_D9",
+      "from": "servo_D9",
+      "to": "UNO_D9"
+    },
+    {
+      "id": "servo_positivo__fonte_positivo",
+      "from": "servo_positivo",
+      "to": "fonte_positivo"
+    },
+    {
+      "id": "servo_GND__BBGND",
+      "from": "servo_GND",
+      "to": "BBGND"
+    },
+    {
+      "id": "fonte_GND__BBGND",
+      "from": "fonte_GND",
+      "to": "BBGND"
+    }
+  ],
+  "assembly_sha256": "bcdb45e52fcfa335d44e8e0b601c85aba982b850cd33e1a4565fc809d7310397",
+  "limitations": "Mechanical and acoustic performance not certified; terminal coordinates approximate but logical nets explicit"
+}
