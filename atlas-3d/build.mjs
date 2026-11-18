@@ -11,6 +11,6 @@ let html=await readFile('index.html','utf8');
 const inlineStyle='<style>'+await readFile('styles.css','utf8')+'</style>';
 html=html.replace(/<link rel="stylesheet" href="styles.css[^"]*">/,()=>inlineStyle);
 const inlineScript='<script type="application/json" id="atlas-data">'+safe(JSON.stringify(data))+'</script><script>'+safe(offline.outputFiles[0].text)+'</script>';
-html=html.replace('<script type="module" src="viewer.bundle.js"></script>',()=>inlineScript);
+html=html.replace(/<script type="module" src="viewer\.bundle\.js(?:\?[^"]*)?"><\/script>/,()=>inlineScript);
 await writeFile('atlas-autonomo.html',html);
 console.log('viewer.bundle.js pronto: ThreeJS, OrbitControls, GLTFLoader e modelo lógico locais.');
