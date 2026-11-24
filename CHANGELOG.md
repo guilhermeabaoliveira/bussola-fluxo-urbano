@@ -1,5 +1,11 @@
 # Histórico de versões
 
+## Revisão de 24/11/2026
+
+- Atlas de anatomia da montagem MDF (`atlas-mdf/`): auxílio à identificação, orientação, encaixe e colagem das 46 peças de MDF 3 mm (B01–B03, R01–R06, T01–T08, C01–C09) sobre o GLB original da maquete, sem duplicar nem redesenhar o modelo.
+- Associação automática por dimensões mantida como conferência; R05/R06 unidos na vista explodida e alvos móveis preservados.
+- Botão Montagem MDF no Atlas 3D e card correspondente no portal. Funcionalidades existentes preservadas.
+
 ## Revisão de 18/11/2026
 
 - Equipe apresentada em tabela com os oito integrantes, perfis GitHub e e-mails institucionais fornecidos.
