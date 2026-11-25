@@ -70,3 +70,4 @@ O HC-SR04 mede distância; não classifica pessoas, cães ou outros alvos. Tecno
 ## Dependências e direitos
 
 A visualização usa Three.js e componentes locais. Veja [terceiros](THIRD_PARTY_NOTICES.md). Uma licença para o trabalho autoral do grupo ainda precisa ser definida pelos responsáveis; a preparação desta pasta não concede licença sobre imagens ou materiais de terceiros.
+
